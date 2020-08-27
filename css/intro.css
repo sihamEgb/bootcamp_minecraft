@@ -1,0 +1,40 @@
+.container{
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width:100vw;
+	height: 100vh;
+	background-image: url('../images/minecraft-dirt-grass-diamonds-wallpaper-preview.jpg');
+	background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; 
+	padding: 5vh;
+}
+.logo{
+	margin:auto;
+	margin-top: 0;
+}
+.logo img{
+	width: 90vw;
+
+}
+ul{
+	list-style: none;
+}
+ul li{
+	text-align: center;
+	margin: 2rem;
+}
+a{
+	text-decoration: none;
+	font-size: 3rem;
+	color: white;
+	padding: 1rem;
+	border: none;
+	background: transparent;
+}
+a:hover{
+	border: 2px solid white;
+	border-radius: 5%;
+}
