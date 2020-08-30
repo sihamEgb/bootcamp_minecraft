@@ -1,0 +1,93 @@
+:root{
+  --sky-color:lightskyblue;
+}  
+a{
+  /* margin: 1rem; */
+  font-size: 2rem;
+  text-decoration-style: none;
+  color: white;
+}
+.tool{
+  width: 70px;
+  height: 70px;
+  /* padding: 10px; */
+  margin: 10px;
+  /* background-color: yellow; */
+}
+.tool:hover{
+  border: 1px solid blue;
+}
+.shovel{
+    content: url('../images/mc_shovel.jpg');
+}
+.axe{
+  content: url('../images/mc_axe.jpg');
+}
+.pickaxe{
+  content: url('../images/mc_pickaxe.jpg');
+
+}
+.selected{
+  border: 5px solid blue;
+}
+.tile{
+  width: 50px;
+  height: 50px;
+  padding: 1px;
+  /* margin: 1px; */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
+.tile:hover{
+  border: 1px solid white;
+}
+.currentTile{
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  background-color: white;
+}
+.dirt{
+  background-image: url('../images/mc_dirt.jpg');
+}
+.wood{
+  background-image: url('../images/mc_tree_wood.jpg');
+}
+.tree{
+  background-image: url('../images/mc_tree_2.jpg');
+}
+.stone{
+  background-image: url('../images/mc_stone.jpg');
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px auto;
+  /* background-color: yellow; */
+  width: 1200px;
+  /* height: 750px; */
+
+}
+.container main{
+  background-color: var(--sky-color);
+  width: 750px;
+  /* height: 750px; */
+  /* margin: 0 auto; */
+
+}
+
+.container nav{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  background-color: black;
+  width: 250px;
+}

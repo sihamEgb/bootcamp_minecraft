@@ -6,10 +6,16 @@ Requirements:
 
 
 ToDo:
-5. main content: image scroll
-4.first navbar
+- reset button
+- make it look better
+- add hover effect on tools
+- add hover effect on tiles boxShadow
+- add hover wrong tool effect on tools
 
+Bugs:
+- reset button
 
 EXTRA:
-- hover on stars in ratings
-- amazon choice tag under ratings
+- add transitions
+- make surface dirt with grass
+- add cloud
