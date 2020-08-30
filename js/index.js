@@ -46,6 +46,12 @@ function fillBoard(){
 	addWood();
 	addTrees();
 }
+function fillSea(){
+	addWater();
+	// addStones();
+	addWood();
+	addTrees();
+}
 function startGame()
 {
 	for(let i =0 ; i< currentGame.boardRows ; i++)
@@ -60,8 +66,26 @@ function startGame()
 		}
 	}
 	fillBoard();
+	// fillSea();
 	attachListeners();
 
+}
+function addWater(){
+	for(let i=currentGame.surfaceRow+1;i<currentGame.boardRows;i++)
+	{
+		for(let j =0 ; j < currentGame.boardCols ; j++)
+		{
+			if( i === currentGame.surfaceRow+1)
+			{
+				makeElement(currentGame.tiles[i][j],'sand');
+			}
+			else
+			{
+				makeElement(currentGame.tiles[i][j],'water');
+		
+			}
+		}
+	}
 }
 function addDirt(){
 	for(let i=currentGame.surfaceRow+1;i<currentGame.boardRows;i++)

@@ -25,14 +25,18 @@ a{
 }
 .pickaxe{
   content: url('../images/hiclipart_pickaxe.png');
-
 }
+.bucket{
+  content: url('../images/mc_bucket.png');
+}
+
+mc_bucket.png
 .selected{
   background-color:blue;
 }
 .tile{
-  width: 50px;
-  height: 50px;
+  width: 5vw;
+  height: 3vw;
   padding: 1px;
   /* margin: 1px; */
   background-position: center; /* Center the image */
@@ -64,6 +68,12 @@ a{
 .stone{
   background-image: url('../images/mc_stone.jpg');
 }
+.sand{
+  background-image: url('../images/mc_sand.jpg');
+}
+.water{
+  background-image: url('../images/mc_water_2.jpg');
+}
 .row{
   display: flex;
   flex-direction: row;
@@ -73,9 +83,9 @@ a{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 10px auto;
+  /* margin: 20px auto; */
   /* background-color: yellow; */
-  width: 1200px;
+  /* width: 1200px; */
   /* height: 750px; */
 
 }
@@ -83,7 +93,7 @@ a{
   background-color: var(--sky-color);
   width: 750px;
   /* height: 750px; */
-  /* margin: 0 auto; */
+  margin: auto;
 
 }
 
@@ -92,8 +102,9 @@ a{
   flex-direction: column;
   justify-content:space-evenly;
   align-items: center;
+  margin: 10px;
   background-color: black;
-  width: 250px;
+  /* width: 250px; */
 }
 
 /* Animation */

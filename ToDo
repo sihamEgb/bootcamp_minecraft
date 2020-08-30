@@ -16,5 +16,7 @@ Bugs:
 
 EXTRA:
 - Add fade-in/out effect when adding/removing tiles
-- make surface dirt with grass
+- make it responsive (for mobile phones)
+- add inventory for All tiles
+- choose starting image
 - add cloud
