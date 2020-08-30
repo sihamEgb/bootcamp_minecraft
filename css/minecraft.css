@@ -51,6 +51,10 @@ a{
 .dirt{
   background-image: url('../images/mc_dirt.jpg');
 }
+.top-dirt{
+  background-image: url('../images/mc_top_dirt.jpg');
+}
+
 .wood{
   background-image: url('../images/mc_tree_wood.jpg');
 }

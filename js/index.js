@@ -1,6 +1,6 @@
 let currentGame = {
 	// tools: {'shovel':'dirt','axe':'wood','pickaxe':'stone'},
-	tileElement: {'dirt':'shovel','stone':'pickaxe','wood':'axe','tree':'axe'},
+	tileElement: {'dirt':'shovel','top-dirt':'shovel','stone':'pickaxe','wood':'axe','tree':'axe'},
 	currentTile: null,
 	currentTool: null,
 	tiles : [],
@@ -64,11 +64,19 @@ function startGame()
 
 }
 function addDirt(){
-	for(let i=0;i<5;i++)
+	for(let i=currentGame.surfaceRow+1;i<currentGame.boardRows;i++)
 	{
 		for(let j =0 ; j < currentGame.boardCols ; j++)
 		{
-			makeElement(currentGame.tiles[currentGame.boardRows-i-1][j],'dirt');
+			if( i === currentGame.surfaceRow+1)
+			{
+				makeElement(currentGame.tiles[i][j],'top-dirt');
+			}
+			else
+			{
+				makeElement(currentGame.tiles[i][j],'dirt');
+		
+			}
 		}
 	}
 }
