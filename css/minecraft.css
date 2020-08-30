@@ -10,25 +10,25 @@ a{
 .tool{
   width: 70px;
   height: 70px;
-  /* padding: 10px; */
   margin: 10px;
-  /* background-color: yellow; */
+  transition: background-color 0.5s linear;
 }
 .tool:hover{
-  border: 1px solid blue;
+  background-color:blue;
+  
 }
 .shovel{
-    content: url('../images/mc_shovel.jpg');
+    content: url('../images/hiclipart_shovel.png');
 }
 .axe{
-  content: url('../images/mc_axe.jpg');
+  content: url('../images/hiclipart_axe.png');
 }
 .pickaxe{
-  content: url('../images/mc_pickaxe.jpg');
+  content: url('../images/hiclipart_pickaxe.png');
 
 }
 .selected{
-  border: 5px solid blue;
+  background-color:blue;
 }
 .tile{
   width: 50px;
@@ -90,4 +90,15 @@ a{
   align-items: center;
   background-color: black;
   width: 250px;
+}
+
+/* Animation */
+@keyframes wrong{
+  0%{
+    background-color: red;
+  }
+  100%{
+    background-color: blue;
+  }
+
 }

@@ -6,7 +6,6 @@ Requirements:
 
 
 ToDo:
-- reset button
 - make it look better
 - add hover effect on tools
 - add hover effect on tiles boxShadow
@@ -16,6 +15,6 @@ Bugs:
 - reset button
 
 EXTRA:
-- add transitions
+- Add fade-in/out effect when adding/removing tiles
 - make surface dirt with grass
 - add cloud

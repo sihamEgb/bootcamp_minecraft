@@ -13,9 +13,7 @@ let currentGame = {
 
 // What I Do
 buildBoard();
-fillBoard();
 startGame();
-attachListeners();
 
 
 
@@ -25,13 +23,6 @@ function makeElement(newTile,elm){
 	newTile.dataset.tile = elm; 
 }
 function buildBoard(){
-
-}
-function fillBoard(){
-	
-}
-function startGame(){
-
 	const minecraft = document.querySelector('.minecraft');	
 	for(let i =0 ; i< currentGame.boardRows ; i++)
 	{ 
@@ -42,17 +33,35 @@ function startGame(){
 		for(let j =0;j< currentGame.boardCols;j++)
 		{	
 				let newTile = document.createElement('div');
-				newTile.classList.add('tile');
-				// makeElement(newTile,'dirt');
+				// newTile.classList.add('tile');
 				row.append(newTile);
 				currentGame.tiles[i][j]=(newTile);
 			}
 			minecraft.append(row);
 		}
+}
+function fillBoard(){
 	addDirt();
 	addStones();
 	addWood();
 	addTrees();
+}
+function startGame()
+{
+	for(let i =0 ; i< currentGame.boardRows ; i++)
+	{ 
+		for(let j =0;j< currentGame.boardCols;j++)
+		{		
+			let element = currentGame.tiles[i][j];
+			element.classList.remove(...element.classList);
+			console.log(	element.classList);
+			element.classList.add('tile');
+			// element.classList.add('div');
+		}
+	}
+	fillBoard();
+	attachListeners();
+
 }
 function addDirt(){
 	for(let i=0;i<5;i++)
@@ -147,7 +156,13 @@ function tileListener(event){
 		// tool not for tile
 		else
 		{
-			// do nothing
+			// add effect on tool
+			console.log(currentGame.currentTool.style);
+			// currentGame.currentTool.style.background = "red";
+			// currentGame.currentTool.style.transition = "red";
+			currentGame.currentTool.style.animation = "wrong 1s linear";
+			//   animation: wrong 2s infinite;
+
 		}
 	}
 }
@@ -201,8 +216,14 @@ function toolListener(event){
 function resetHandler(event){
 	console.log('reset...');
 	currentGame.currentTool = null;
-	currentGame.currentTile = null;
-	currentGame.tiles = [];
+	let newClass = currentGame.currentTile.dataset.tile;
+	if(newClass)
+	{
+		currentGame.currentTile.classList.remove(newClass);
+	}
+	// currentGame.tiles = [];
+	let selected = document.querySelectorAll('.selected');
+	selected.forEach(elm => elm.classList.remove('selected'));
 	startGame();
 	
 
@@ -211,11 +232,11 @@ function attachListeners(){
 	let tiles = document.querySelectorAll('.tile'); 
 	tiles.forEach(tile => tile.addEventListener('click',tileListener));
 	
-	let tools = document.querySelectorAll('.tool'); 
-	tools.forEach(tool => tool.addEventListener('click',toolListener));
+	currentGame.tools = document.querySelectorAll('.tool'); 
+	currentGame.tools.forEach(tool => tool.addEventListener('click',toolListener));
 
 	currentGame.currentTile = document.querySelector('.currentTile');
-	// console.log(currentTile);
+	console.log("current tile",currentGame.currentTile);
 	currentGame.currentTile.addEventListener('click',currentTileListener);
 	currentGame.currentTile.removeEventListener('click',tileListener);
 

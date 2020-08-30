@@ -2,7 +2,7 @@
 
 ## Submitted 
 - Github: https://github.com/sihamEgb/bootcamp_minecraft
-- Netlify:
+- Netlify: https://stoic-beaver-bcab4e.netlify.app
 
 ## What is this app?
  2D pre-generated world of Minecraft.
@@ -13,7 +13,7 @@ This is my first project using js , so working with classes for style sheets and
 Also, separating functionalities in event handlers for different elements in the game required a lot of focus   
 
 ## Known Bugs
-TBD
+- no background effect when wrong tool selected
 
 ## My Review of this assignment
 This assignment was very fun, because we saw visual results for the event listeners.
